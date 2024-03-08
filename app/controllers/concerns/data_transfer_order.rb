@@ -15,7 +15,7 @@ module DataTransferProduct
     print(user, product)
 
     if user && product
-      Order.create!(
+      Order.create(
         user_id: user.id,
         product_id: product.id,
         order_date: row['ORDER_DATE']

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
 
   get 'users/:id/download_csv', to: 'users#download_csv', format: false, as: 'user_csv'
+  get 'users/:id/check_csv_status', to: 'users#check_csv_status', format: false, as: 'user_csv_status'
 end
